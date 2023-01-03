@@ -19,7 +19,7 @@ class UserModule {
     }
 
     @Provides
-    @Named("Firebase")
+    @FirebaseUserRepo
     fun providesFirebaseRepository(firebaseRepository: FirebaseRepository):UserRepository{
         return firebaseRepository
     }
@@ -33,3 +33,6 @@ class UserModule {
 //So every time we need a UserRepository object we need to explicitly let the hilt know that which object are we demanding
 //For that we use qualifiers
 //Qualifiers are nothing but tags
+
+//But in case of @Named annotation, we are passing a string, that can is error prone
+//So we can create our own custom annotations

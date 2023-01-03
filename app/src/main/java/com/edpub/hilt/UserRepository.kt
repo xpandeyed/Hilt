@@ -3,9 +3,9 @@ package com.edpub.hilt
 import android.util.Log
 import javax.inject.Inject
 
-class UserRepository @Inject constructor() {
+class UserRepository @Inject constructor(val loggerService: LoggerService) {
     fun saveUser(email:String, password: String){
-        Log.i("hilttest", "$email $password")
+        loggerService.log("my message")
     }
 
 }

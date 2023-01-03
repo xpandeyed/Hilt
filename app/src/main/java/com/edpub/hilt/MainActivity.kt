@@ -26,3 +26,10 @@ class MainActivity : AppCompatActivity() {
 //1. For third party library classes (we cannot modify the classes)
 //2. Interfaces and abstract classes as we cannot create their objects.
 //Here comes the module
+
+//For each module we need to specify at which level the objects will be created and for that we need to use InstallIn annotation
+//And we pass the level (e.g.: FragmentComponent::class for fragment level)
+//Each level can get objects created by modules at ancestor's level
+//That is Fragment can get Activity and Application level
+//Activity can get Application level
+//But Activity cannot get objects from fragment level

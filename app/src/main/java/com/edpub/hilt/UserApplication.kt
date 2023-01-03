@@ -8,10 +8,8 @@ import javax.inject.Inject
 @HiltAndroidApp //must use annotation with Application class
 class UserApplication: Application() {
 
-    @Inject
-    lateinit var userRepo: UserRepository
+
     override fun onCreate() {
         super.onCreate()
-        userRepo.saveUser("lal", "lal")
     }
 }

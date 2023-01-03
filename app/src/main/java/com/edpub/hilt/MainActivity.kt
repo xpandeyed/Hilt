@@ -33,3 +33,6 @@ class MainActivity : AppCompatActivity() {
 //That is Fragment can get Activity and Application level
 //Activity can get Application level
 //But Activity cannot get objects from fragment level
+
+//Whenever we need to bind an interface to an implementation then we need, bind annotation
+//Provides annotation can also be used but bind is more preferred

@@ -6,7 +6,7 @@ import dagger.hilt.android.AndroidEntryPoint
 import javax.inject.Inject
 
 
-@AndroidEntryPoint //must be used for activity class if using hilt
+@AndroidEntryPoint //must be used for activity class and fragment class if using hilt
 class MainActivity : AppCompatActivity() {
 
     @Inject
@@ -20,3 +20,5 @@ class MainActivity : AppCompatActivity() {
 }
 
 //for every hilt project we need to define application class
+
+//if fragment has @AndroidEntryPoint annotation then parent activity must have the same annotation
